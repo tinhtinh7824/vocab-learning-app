@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "VocabLearningApp"
+rootProject.name = "My Application"
 include(":app")
  

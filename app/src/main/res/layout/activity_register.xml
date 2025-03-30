@@ -7,10 +7,17 @@
     android:padding="20dp">
 
     <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Họ và tên" />
+
+    <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email" />
+        android:hint="Email"
+        android:layout_marginTop="10dp" />
 
     <EditText
         android:id="@+id/password"
@@ -21,9 +28,9 @@
         android:layout_marginTop="10dp" />
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/registerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Đăng nhập"
+        android:text="Đăng ký"
         android:layout_marginTop="10dp" />
 </LinearLayout>
