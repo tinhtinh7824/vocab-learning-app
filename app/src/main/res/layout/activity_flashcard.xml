@@ -1,7 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flashcardRoot"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    android:padding="16dp"
+    tools:context=".activities.FlashcardActivity">
 
-</LinearLayout>
+    <!-- Mặt trước và sau được bao trong FrameLayout để lật -->
+    <FrameLayout
+        android:id="@+id/flashcardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true">
+
+        <!-- Mặt trước -->
+        <LinearLayout
+            android:id="@+id/frontCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_card"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/txtWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Từ vựng"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#333" />
+
+            <ImageView
+                android:id="@+id/btnSpeak"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:src="@android:drawable/ic_btn_speak_now"
+                android:contentDescription="Phát âm" />
+        </LinearLayout>
+
+        <!-- Mặt sau -->
+        <LinearLayout
+            android:id="@+id/backCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_card"
+            android:padding="24dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtMeaning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nghĩa"
+                android:textSize="20sp"
+                android:textColor="#444"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/txtPronunciation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phiên âm"
+                android:textSize="18sp"
+                android:textColor="#666" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tiếp theo"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:textSize="18sp"
+        android:backgroundTint="#FF5722"
+        android:textColor="@android:color/white" />
+</RelativeLayout>

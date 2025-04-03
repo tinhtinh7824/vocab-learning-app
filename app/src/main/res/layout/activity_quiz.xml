@@ -1,7 +1,133 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:padding="20dp">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Thanh trên cùng -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:backgroundTint="@android:color/white"
+                android:background="@android:color/white"
+                android:src="@android:drawable/ic_media_previous"
+                android:tint="#000000"
+                android:scaleType="center"
+                android:contentDescription="Quay lại"
+                android:elevation="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="4dp"
+                android:padding="12dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/timerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30 giây"
+                android:backgroundTint="#EC6D4D"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:background="#EC6D4D"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:id="@+id/questionCounterTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="7/13"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="6dp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Câu hỏi -->
+        <TextView
+            android:id="@+id/questionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Từ vựng?"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:layout_marginBottom="4dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <!-- Gợi ý mô tả -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Một gợi ý hoặc mô tả phụ"
+            android:textSize="14sp"
+            android:textColor="#444444"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <!-- Danh sách đáp án -->
+        <RadioGroup
+            android:id="@+id/choicesGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal">
+
+            <!-- Mỗi đáp án nên dùng layout custom hoặc thêm bằng code -->
+        </RadioGroup>
+
+        <!-- Kết quả -->
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF5722"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Nút xác nhận -->
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đồng ý"
+            android:textAllCaps="false"
+            android:backgroundTint="#FF5722"
+            android:textColor="@android:color/white"
+            android:paddingVertical="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+</ScrollView>

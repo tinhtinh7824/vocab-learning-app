@@ -1,0 +1,37 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#FAFAFA">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ready for a Quiz?"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#FF5722"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thử tài kiến thức của bạn bằng cách trả lời các câu hỏi thú vị."
+        android:textSize="16sp"
+        android:textColor="#666"
+        android:gravity="center"
+        android:layout_marginBottom="36dp"/>
+
+    <Button
+        android:id="@+id/startQuizButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bắt đầu Quiz"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#FF5722"
+        android:padding="12dp"/>
+</LinearLayout>
