@@ -1,7 +1,7 @@
 package com.example.vocablearningapp;
 
 import android.os.Bundle;
-
+import android.database.sqlite.SQLiteDatabase;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -20,5 +20,12 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db.execSQL("INSERT INTO Account (userID, userName, email, passWord) VALUES ('1', 'John Doe', 'john@example.com', 'password123');");
+        db.execSQL("INSERT INTO Topic (topicID, topicName) VALUES ('1', 'Vocabulary');");
+        db.execSQL("INSERT INTO Word (wordID, word, meaning, topicID) VALUES ('1', 'Hello', 'Xin chào', '1');");
+
+        dbHelper.close();
     }
 }
