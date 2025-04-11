@@ -8,8 +8,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
-    private EditText emailInput, passwordInput;
-    private Button loginButton;
+
+    private EditText etUsername, etPassword;
+    private Button btnLogin;
     private DatabaseHelper dbHelper;
 
     @Override
@@ -18,22 +19,28 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         dbHelper = new DatabaseHelper(this);
-        emailInput = findViewById(R.id.email);
-        passwordInput = findViewById(R.id.password);
-        loginButton = findViewById(R.id.loginButton);
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String email = emailInput.getText().toString();
-                String password = passwordInput.getText().toString();
+        etUsername = findViewById(R.id.editTextLoginUsername);
+        etPassword = findViewById(R.id.editTextLoginPassword);
+        btnLogin = findViewById(R.id.buttonLogin);
 
-                if (dbHelper.checkUser(email, password)) {
-                    Toast.makeText(LoginActivity.this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(LoginActivity.this, "Sai thông tin đăng nhập!", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+        btnLogin.setOnClickListener(v -> loginUser());
+    }
+
+    private void loginUser() {
+        String username = etUsername.getText().toString().trim();
+        String password = etPassword.getText().toString().trim();
+
+        if (username.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (dbHelper.validateUser(username, password)) {
+            Toast.makeText(this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
+            // TODO: Chuyển sang Activity chính
+        } else {
+            Toast.makeText(this, "Tên đăng nhập hoặc mật khẩu sai.", Toast.LENGTH_SHORT).show();
+        }
     }
 }

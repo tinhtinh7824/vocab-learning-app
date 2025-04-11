@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_username">Nom d\'utilisateur (obligatoire)</string>
+    <string name="hint_email">Email (obligatoire)</string>
+    <string name="hint_phone">Numéro de téléphone</string>
+    <string name="hint_password">Mot de passe (obligatoire)</string>
+    <string name="hint_confirm_password">Confirmez le mot de passe (obligatoire)</string>
+    <string name="button_register">S\'inscrire</string>
+    <string name="button_login">Se connecter</string>
+</resources>
