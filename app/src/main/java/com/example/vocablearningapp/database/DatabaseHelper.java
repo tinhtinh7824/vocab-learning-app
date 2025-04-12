@@ -100,4 +100,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS User_Quiz");
         onCreate(db);
     }
+    public void insertWord(String wordID, String word, String wordType, String meaning,
+                           String pronunciation, String example, String topicID) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("wordID", wordID);
+        values.put("word", word);
+        values.put("wordType", wordType);
+        values.put("meaning", meaning);
+        values.put("pronunciation", pronunciation);
+        values.put("example", example);
+        values.put("topicID", topicID);
+        db.insert("Word", null, values);
+        db.close();
+    }
+    public List<String> getWordsByTopic(String topicID) {
+        List<String> wordList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT word FROM Word WHERE topicID = ?", new String[]{topicID});
+
+        if (cursor.moveToFirst()) {
+            do {
+                wordList.add(cursor.getString(0));
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return wordList;
+    }
 }

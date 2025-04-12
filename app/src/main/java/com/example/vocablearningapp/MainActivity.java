@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import com.example.vocablearningapp.utils.NetworkUtil;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,5 +29,12 @@ public class MainActivity extends AppCompatActivity {
         db.execSQL("INSERT INTO Word (wordID, word, meaning, topicID) VALUES ('1', 'Hello', 'Xin chào', '1');");
 
         dbHelper.close();
+        dbHelper = new DatabaseHelper(this);
+
+        if (NetworkUtil.isNetworkAvailable(this)) {
+            Toast.makeText(this, "Đang Online - Dữ liệu có thể đồng bộ.", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Đang Offline - Dữ liệu chỉ được lưu cục bộ.", Toast.LENGTH_LONG).show();
+        }
     }
 }
