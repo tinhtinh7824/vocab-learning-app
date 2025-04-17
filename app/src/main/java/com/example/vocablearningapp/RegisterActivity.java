@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText etUsername, etEmail, etPhone, etPassword, etConfirmPassword;
-    private Button btnRegister;
+    private Button btnRegister, btnGoToLogin;
     private DatabaseHelper dbHelper;
 
     @Override
@@ -27,8 +27,13 @@ public class RegisterActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.editTextPassword);
         etConfirmPassword = findViewById(R.id.editTextConfirmPassword);
         btnRegister = findViewById(R.id.buttonRegister);
-
+        btnGoToLogin = findViewById(R.id.buttonGoToLogin);
         btnRegister.setOnClickListener(v -> registerUser());
+
+        btnGoToLogin.setOnClickListener(v -> {
+            Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void registerUser() {

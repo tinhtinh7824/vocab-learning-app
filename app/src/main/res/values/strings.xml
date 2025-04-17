@@ -6,5 +6,6 @@
     <string name="hint_confirm_password">Nhập lại mật khẩu (bắt buộc)</string>
     <string name="button_register">Đăng ký</string>
     <string name="button_login">Đăng nhập</string>
-
+    <string name="button_gotoregister">Chưa có tài khoản? Đăng ký</string>
+    <string name="button_gotologin">Đã có tài khoản? Đăng nhập</string>
 </resources>

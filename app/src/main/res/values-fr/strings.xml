@@ -7,4 +7,6 @@
     <string name="hint_confirm_password">Confirmez le mot de passe (obligatoire)</string>
     <string name="button_register">S\'inscrire</string>
     <string name="button_login">Se connecter</string>
+    <string name="button_gotoregister">Vous n\'avez pas de compte? S\'inscrire</string>
+    <string name="button_gotologin">Vous avez déjà un compte? Se connecter</string>
 </resources>
