@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F3F4F6">
+
+    <!-- Hiển thị tên chủ đề -->
+    <TextView
+        android:id="@+id/topicName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chủ đề"
+        android:textSize="22sp"
+        android:textColor="#2E3A59"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- Danh sách các nút -->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:radius="12dp"
+        android:elevation="6dp"
+        android:backgroundTint="#F7F8FB">
+
+        <Button
+            android:id="@+id/btnVocabularyList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Danh sách từ vựng"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/colorPrimary"
+            android:padding="14dp"
+            android:layout_gravity="center_horizontal"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:radius="12dp"
+        android:elevation="6dp"
+        android:backgroundTint="#F7F8FB">
+
+        <Button
+            android:id="@+id/btnFlashcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Flashcard"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/colorAccent"
+            android:padding="14dp"
+            android:layout_gravity="center_horizontal"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:radius="12dp"
+        android:elevation="6dp"
+        android:backgroundTint="#F7F8FB">
+
+        <Button
+            android:id="@+id/btnReviewTopic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ôn tập từ vựng"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:padding="14dp"
+            android:layout_gravity="center_horizontal"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:radius="12dp"
+        android:elevation="6dp"
+        android:backgroundTint="#F7F8FB">
+
+        <Button
+            android:id="@+id/btnQuizHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lịch sử bài kiểm tra"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/colorPurple"
+            android:padding="14dp"
+            android:layout_gravity="center_horizontal"/>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <!-- Theme.Material3.DayNight.NoActionBar -->
+    <style name="Theme.Material3.DayNight.NoActionBar" parent="Theme.Material3.DayNight">
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <!-- Your custom app theme -->
+    <style name="Theme.Eapp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+    </style>
+</resources>

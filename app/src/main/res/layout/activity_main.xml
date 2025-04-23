@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#d1dceb"
+    android:padding="24dp">
+
+    <!-- Logo hình cú mèo -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:src="@drawable/logo"
+        android:contentDescription="Logo SALFORD"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Tên ứng dụng: SALFORD -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SALFORD"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#223344"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Phụ đề: Kids Learning Center -->
+    <TextView
+        android:id="@+id/subTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kids Learning Center"
+        android:textSize="18sp"
+        android:textColor="#4b9ea5"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Các nút Đăng nhập và Đăng ký -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"> <!-- Cải thiện khoảng cách giữa các nút -->
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Đăng nhập"
+            android:backgroundTint="#4b9ea5"
+            android:textColor="#ffffff"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"/> <!-- Thêm margin start để nút có không gian ở bên trái -->
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Đăng ký"
+            android:backgroundTint="#4b9ea5"
+            android:textColor="#ffffff"
+            android:layout_marginStart="8dp"/> <!-- Thêm margin start để nút có không gian ở bên trái -->
+
+    </LinearLayout>
+
+</LinearLayout>

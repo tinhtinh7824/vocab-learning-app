@@ -1,0 +1,11 @@
+<resources>
+    <string name="hint_username">Tên đăng nhập</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_phone">Số điện thoại</string>
+    <string name="hint_password">Mật khẩu</string>
+    <string name="hint_confirm_password">Nhập lại mật khẩu</string>
+    <string name="button_register">Đăng ký</string>
+    <string name="button_login">Đăng nhập</string>
+    <string name="app_name">Vocab Learning App</string>
+
+</resources>

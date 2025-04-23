@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- Tên từ vựng (Tiếng Anh) -->
+    <TextView
+        android:id="@+id/txtWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Apple" />
+
+    <!-- Phiên âm -->
+    <TextView
+        android:id="@+id/txtPronunciation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="(ˈæpl)" />
+
+    <!-- Nghĩa -->
+    <TextView
+        android:id="@+id/txtMeaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nghĩa: Táo"
+        android:textSize="16sp" />
+
+    <!-- Ví dụ -->
+    <TextView
+        android:id="@+id/txtExample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ví dụ: I ate an apple for breakfast"
+        android:textSize="14sp"
+        android:textColor="#666666" />
+</LinearLayout>
