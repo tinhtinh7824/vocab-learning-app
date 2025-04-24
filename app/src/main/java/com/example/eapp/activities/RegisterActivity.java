@@ -5,6 +5,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+import com.example.eapp.utils.NetworkUtils;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -46,6 +48,10 @@ public class RegisterActivity extends AppCompatActivity {
         String phone = etPhone.getText().toString().trim();
         String password = etPassword.getText().toString().trim();
         String confirmPassword = etConfirmPassword.getText().toString().trim();
+        if (!NetworkUtils.isNetworkAvailable(this)) {
+            Toast.makeText(this, "Không có kết nối mạng. Vui lòng kiểm tra lại.", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         if (username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
             Toast.makeText(this, "Vui lòng điền đầy đủ thông tin bắt buộc.", Toast.LENGTH_SHORT).show();

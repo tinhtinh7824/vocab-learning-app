@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+import com.example.eapp.utils.NetworkUtils;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -43,7 +44,10 @@ public class LoginActivity extends AppCompatActivity {
     private void loginUser() {
         String username = etUsername.getText().toString().trim();
         String password = etPassword.getText().toString().trim();
-
+        if (!NetworkUtils.isNetworkAvailable(this)) {
+            Toast.makeText(this, "Không có kết nối mạng. Vui lòng kiểm tra lại.", Toast.LENGTH_SHORT).show();
+            return;
+        }
         // Kiểm tra nếu thông tin đăng nhập không trống
         if (username.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin.", Toast.LENGTH_SHORT).show();
